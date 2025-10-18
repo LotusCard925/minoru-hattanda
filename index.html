@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="竹下圭一郎">
+    <title>竹下圭一郎 - プロフィール</title>
+    
+    <!-- ホーム画面追加用のアイコン設定 -->
+    <link rel="apple-touch-icon" href="7W2A7485 .jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="7W2A7485 .jpg">
+    <link rel="apple-touch-icon" sizes="167x167" href="7W2A7485 .jpg">
+    <link rel="apple-touch-icon" sizes="152x152" href="7W2A7485 .jpg">
+    <link rel="apple-touch-icon" sizes="144x144" href="7W2A7485 .jpg">
+    <link rel="apple-touch-icon" sizes="120x120" href="7W2A7485 .jpg">
+    <link rel="apple-touch-icon" sizes="114x114" href="7W2A7485 .jpg">
+    <link rel="apple-touch-icon" sizes="76x76" href="7W2A7485 .jpg">
+    <link rel="apple-touch-icon" sizes="72x72" href="7W2A7485 .jpg">
+    <link rel="apple-touch-icon" sizes="60x60" href="7W2A7485 .jpg">
+    <link rel="apple-touch-icon" sizes="57x57" href="7W2A7485 .jpg">
+    
+    <!-- ファビコン設定 -->
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="7W2A7485 .jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="7W2A7485 .jpg">
+    <link rel="shortcut icon" href="7W2A7485 .jpg">
+    
+    <!-- Android用アイコン -->
+    <link rel="icon" sizes="192x192" href="7W2A7485 .jpg">
+    <link rel="icon" sizes="512x512" href="7W2A7485 .jpg">
+    
+    <!-- PWA用のマニフェスト -->
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <div class="header">
+        </div>
+
+        <!-- バナー画像 -->
+        <div class="banner">
+            <div class="banner-image">
+                <img src="c_kokubu.png" alt="Background" class="banner-bg-image clickable-image" onclick="openImageModal('c_kokubu.png', '')">
+            </div>
+        </div>
+
+        <!-- プロフィール情報 -->
+        <div class="profile-section">
+            <div class="profile-logo">
+                <div class="logo-circle">
+                    <img src="7W2A7485 .jpg" alt="竹下圭一郎 Profile" class="profile-image clickable-image" onclick="openImageModal('7W2A7485 .jpg', '')">
+                </div>
+                <div class="profile-name">竹下　圭一郎</div>
+            </div>
+
+            <div class="title">国分リース株式会社/株式会社ナンニチ/ケルノ</div>
+            <div class="subtitle">代表取締役/常務取締役/代表</div>
+
+            <!-- タグ -->
+            <div class="tags">
+                <div class="tag-row">
+                    <span class="tag">建設機械レンタル</span>
+                    <span class="tag">建設機械販売</span>
+                </div>
+                <div class="tag-row">
+                    <span class="tag">サッカーチーム運営</span>
+                    <span class="tag">地域社会貢献</span>
+                </div>
+            </div>
+
+        <!-- アクションボタン -->
+        <div class="action-buttons">
+            <button class="btn-secondary" id="open-save-modal-button">
+                <i class="fas fa-save"></i>
+                情報の保存
+            </button>
+            <button class="btn-edit" onclick="toggleEditMode()" style="display: none;">
+                <i class="fas fa-edit"></i>
+                編集モード
+            </button>
+        </div>
+
+            <!-- タブセクション -->
+            <div class="tab-section">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="showTab('about')">自己紹介</button>
+                    <button class="tab-btn" onclick="showTab('activities')">活動</button>
+                    <button class="tab-btn" onclick="showTab('community')">コミュニティ</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div id="about" class="tab-panel active">
+                        <h3>自己紹介</h3>
+                        <div class="intro-toggle">
+                            <div class="intro-preview">
+                                <p>鹿児島県霧島市出身。地域社会貢献活動に積極的に取り組んでいます。</p>
+                                <p>建設機械のレンタル・販売事業とサッカーチーム運営を通じて、地域の発展に貢献しています。</p>
+                                <button class="toggle-btn" onclick="toggleIntro()">
+                                    <span class="toggle-text">もっと詳しく見る</span>
+                                    <i class="fas fa-chevron-down toggle-icon"></i>
+                                </button>
+                            </div>
+                            <div class="intro-detail" style="display: none;">
+                                <p>鹿児島県霧島市出身。地域社会貢献活動に積極的に取り組んでいます。</p>
+                                <p>建設機械のレンタル・販売事業とサッカーチーム運営を通じて、地域の発展に貢献しています。</p>
+                                <p><strong>【地域社会貢献活動】</strong><br>
+                                霧島青年会議所　第27代理事長<br>
+                                日本青年会議所　鹿児島ブロック協議会<br>
+                                第42代会長</p>
+                                
+                                <p><strong>【仕事】</strong><br>
+                                国分リースでは代表取締役として建設機械のレンタルを行っています<br>
+                                ナンニチでは常務取締役として建設機械の販売、修理を行っています<br>
+                                ケルノでは代表として小中高のサッカーチームを運営しています</p>
+                                
+                                
+                                <button class="toggle-btn" onclick="toggleIntro()">
+                                    <span class="toggle-text">簡潔に表示</span>
+                                    <i class="fas fa-chevron-up toggle-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="activities" class="tab-panel">
+                        <h3>活動・事業</h3>
+                        <div class="activity-item">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <h4>国分リース株式会社</h4>
+                                <p>代表取締役</p>
+                                <p class="activity-detail">建設機械レンタル事業を展開</p>
+                            </div>
+                        </div>
+                        <a href="https://www.nannichi.com/nannichi/" target="_blank" class="activity-link">
+                            <div class="activity-item">
+                                <i class="fas fa-tools"></i>
+                                <div>
+                                    <h4>株式会社ナンニチ</h4>
+                                    <p>常務取締役</p>
+                                    <p class="activity-detail">建設機械販売・修理事業を展開</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.kelno.net/" target="_blank" class="activity-link">
+                            <div class="activity-item">
+                                <i class="fas fa-futbol"></i>
+                                <div>
+                                    <h4>ケルノ</h4>
+                                    <p>代表</p>
+                                    <p class="activity-detail">小中高サッカーチーム運営を開始</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://kirishima-jc.jp/" target="_blank" class="activity-link">
+                            <div class="activity-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4>霧島青年会議所</h4>
+                                    <p>第27代理事長</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div id="community" class="tab-panel">
+                        <h3>コミュニティ</h3>
+                        <a href="https://www.instagram.com/kajilev_sports_project/" target="_blank" class="activity-link">
+                            <div class="activity-item">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <h4>THE MATCH</h4>
+                                    <p>プロデューサー</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://kirihallo.com/" target="_blank" class="activity-link">
+                            <div class="activity-item">
+                                <i class="fas fa-ghost"></i>
+                                <div>
+                                    <h4>キリハロ</h4>
+                                    <p>企画者</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/fm_kirishima/" target="_blank" class="activity-link">
+                            <div class="activity-item">
+                                <i class="fas fa-broadcast-tower"></i>
+                                <div>
+                                    <h4>FMきりしま</h4>
+                                    <p>取締役</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="activity-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <div>
+                                <h4>竹下塾</h4>
+                                <p>塾長</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- ソーシャルメディアリンク -->
+            <div class="social-links">
+                <a href="mailto:kln.keybo@gmail.com" class="social-link">
+                    <div class="social-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="social-info">
+                        <div class="social-name">Email</div>
+                        <div class="social-handle">kln.keybo@gmail.com</div>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+
+                <a href="tel:09044887452" class="social-link">
+                    <div class="social-icon phone">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="social-info">
+                        <div class="social-name">Phone</div>
+                        <div class="social-handle">090-4488-7452</div>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/nannichi.kirishima/" class="social-link" target="_blank">
+                    <div class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="social-info">
+                        <div class="social-name">Instagram</div>
+                        <div class="social-handle">@nannichi.kirishima</div>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+
+                <a href="https://www.nannichi.com/nannichi/" class="social-link" target="_blank">
+                    <div class="social-icon website">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="social-info">
+                        <div class="social-name">Website</div>
+                        <div class="social-handle">株式会社ナンニチ</div>
+                    </div>
+                    <div class="social-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        
+        <!-- フッター -->
+        <div class="footer">
+            <p>Keiichiro Takeshita</p>
+        </div>
+    </div>
+
+    <!-- 情報保存モーダル -->
+    <div id="save-options-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <p class="modal-title">保存方法を選択</p>
+            <div class="modal-actions">
+                <button id="add-to-home-screen-button" class="modal-button">
+                    <i class="fas fa-home"></i>
+                    ホーム画面に追加
+                </button>
+                
+                <button onclick="downloadContactFromModal()" class="modal-button">
+                    <i class="fas fa-address-book"></i>
+                    連絡先に保存
+                </button>
+
+                <a
+                    href="mailto:?subject=【竹下圭一郎様】連絡先&body=竹下圭一郎様の連絡先です。%0A%0A---%0A会社名: 国分リース株式会社/株式会社ナンニチ/ケルノ%0A役職: 代表取締役/常務取締役/代表%0Aメール: kln.keybo@gmail.com%0A電話: 090-4488-7452%0AInstagram: https://www.instagram.com/nannichi.kirishima/%0AWebsite: https://www.nannichi.com/nannichi/%0A---%0A建設機械事業・サッカーチーム運営・地域社会貢献活動"
+                    class="modal-button"
+                >
+                    <i class="fas fa-envelope"></i>
+                    自分にメールを送る
+                </a>
+            </div>
+            <button id="close-modal-button" class="modal-close-button">戻る</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
