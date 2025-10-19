@@ -121,13 +121,13 @@ function initSocialLinks() {
 function showContactInfo() {
     const contactInfo = `
 連絡先情報:
-📧 Email: morinaga@fcandm926.com
-📱 Phone: 090-5292-6482
-📷 Instagram: @fcandm.morinaga
-📘 Facebook: 守永博貴
+📧 Email: hattanda@qreat.co.jp
+📱 Phone: 090-5620-3491
+📷 Instagram: @bafantianrang4
+📘 Facebook: 八反田穣
     `.trim();
     
-    createCustomModal('守永博貴 - 連絡先情報', contactInfo);
+    createCustomModal('Minoru Hattanda - 連絡先情報', contactInfo);
 }
 
 // カスタムモーダル作成
@@ -260,7 +260,7 @@ async function downloadContactFromModal() {
         // プロフィール画像をBase64で取得（エラーが発生しても続行）
         let profileImageBase64 = '';
         try {
-            profileImageBase64 = await getImageAsBase64('icon copy.jpeg');
+            profileImageBase64 = await getImageAsBase64('icon.jpg');
         } catch (error) {
             console.log('画像取得エラー（続行）:', error);
         }
@@ -268,14 +268,17 @@ async function downloadContactFromModal() {
         // vCardを作成
         let vCardData = `BEGIN:VCARD
 VERSION:3.0
-FN:守永博貴
-ORG:株式会社FC&M
-TITLE:代表取締役
-EMAIL:morinaga@fcandm926.com
-TEL:09052926482
-URL:https://www.instagram.com/fcandm.morinaga
-URL:https://www.facebook.com/profile.php?id=100014048287809
-NOTE:財務コンサルタント・トリプルインカムメソッド開発者`;
+FN:Minoru Hattanda
+ORG:クリイトフィナンシャル株式会社・クリイト株式会社
+TITLE:営業
+EMAIL:hattanda@qreat.co.jp
+TEL:09056203491
+URL:https://www.instagram.com/bafantianrang4
+URL:https://www.facebook.com/profile.php?id=100038618521575
+URL:https://line.me/ti/p/oXyczhrtwe
+URL:https://www.qreatfinancial.co.jp/
+URL:https://qreat.co.jp/
+NOTE:証券外務員・投資相談・資産運用サポート`;
 
         // プロフィール画像がある場合のみ追加
         if (profileImageBase64 && profileImageBase64.length > 0) {
@@ -1090,7 +1093,7 @@ document.addEventListener('DOMContentLoaded', function() {
 3. 「ホーム画面に追加」をタップ
 4. 案内に従って追加
 
-追加後は守永博貴さんのプロフィール画像がアイコンとして表示され、「守永博貴」という名前でホーム画面に追加されます。`;
+追加後は八反田穣さんのプロフィール画像がアイコンとして表示され、「Minoru Hattanda」という名前でホーム画面に追加されます。`;
         alert(instructions);
         if (saveModal) { 
             saveModal.style.display = 'none'; 
