@@ -268,16 +268,13 @@ async function downloadContactFromModal() {
         // vCardを作成
         let vCardData = `BEGIN:VCARD
 VERSION:3.0
-FN:Minoru Hattanda
+FN:八反田穣
+N:穣;八反田;;;
 ORG:クリイトフィナンシャル株式会社・クリイト株式会社
 TITLE:営業
 EMAIL:hattanda@qreat.co.jp
-TEL:09056203491
-URL:https://www.instagram.com/bafantianrang4
-URL:https://www.facebook.com/profile.php?id=100038618521575
-URL:https://line.me/ti/p/oXyczhrtwe
-URL:https://www.qreatfinancial.co.jp/
-URL:https://qreat.co.jp/
+TEL:090-5620-3491
+URL:https://minoru-hattanda.vercel.app
 NOTE:証券外務員・投資相談・資産運用サポート`;
 
         // プロフィール画像がある場合のみ追加
@@ -295,7 +292,7 @@ END:VCARD`;
         
         const link = document.createElement('a');
         link.href = url;
-        link.download = 'Morinaga_Hiroki.vcf'; // 英語ファイル名で問題回避
+        link.download = 'Minoru_Hattanda.vcf'; // 英語ファイル名で問題回避
         link.style.display = 'none';
         document.body.appendChild(link);
         link.click();
