@@ -282,9 +282,8 @@ async function downloadContactFromModal() {
         let vCardData = `BEGIN:VCARD
 VERSION:3.0
 FN:八反田穣
-N:穣;八反田;;;
+N:八反田;穣;;;
 ORG:クリイトフィナンシャル株式会社・クリイト株式会社
-TITLE:営業
 EMAIL:hattanda@qreat.co.jp
 TEL:090-5620-3491
 URL:https://minoru-hattanda.vercel.app
