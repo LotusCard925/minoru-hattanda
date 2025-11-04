@@ -96,14 +96,13 @@ function initButtonEvents() {
 // ソーシャルリンクのイベントリスナー設定
 function initSocialLinks() {
     const socialLinks = document.querySelectorAll('.social-link');
+    const activityItems = document.querySelectorAll('.activity-item, .achievement-item');
+    const tags = document.querySelectorAll('.tag');
     
     socialLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // リンクのホバー効果
-            this.style.transform = 'translateX(8px)';
-            setTimeout(() => {
-                this.style.transform = 'translateX(4px)';
-            }, 200);
+        link.addEventListener('click', function() {
+            this.classList.add('pop-active');
+            setTimeout(() => this.classList.remove('pop-active'), 180);
         });
 
         // マウスオーバー効果
@@ -113,6 +112,20 @@ function initSocialLinks() {
 
         link.addEventListener('mouseleave', function() {
             this.style.transform = 'translateX(0)';
+        });
+    });
+
+    activityItems.forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.add('pop-active');
+            setTimeout(() => this.classList.remove('pop-active'), 180);
+        });
+    });
+
+    tags.forEach(tag => {
+        tag.addEventListener('click', function() {
+            this.classList.add('pop-active');
+            setTimeout(() => this.classList.remove('pop-active'), 180);
         });
     });
 }
@@ -1052,13 +1065,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const saveModal = document.getElementById('save-options-modal');
     const openBtn = document.getElementById('open-save-modal-button');
     const closeBtn = document.getElementById('close-modal-button');
-    const addToHomeBtn = document.getElementById('add-to-home-screen-button');
 
-    if (openBtn) openBtn.addEventListener('click', () => {
-        if (saveModal) { 
-            saveModal.style.display = 'flex'; 
-            document.body.style.overflow = 'hidden'; 
-        }
+    if (openBtn) openBtn.addEventListener('click', async () => {
+        // モーダルは使わず、即時に連絡先を保存
+        await downloadContactFromModal();
     });
     
     if (closeBtn) closeBtn.addEventListener('click', () => {
@@ -1075,28 +1085,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    if (addToHomeBtn) addToHomeBtn.addEventListener('click', () => {
-        const instructions = `ホーム画面に追加する手順
-
-【iPhone/iPadの場合】
-1. Safariでサイトを開く
-2. 共有アイコン（□↑）をタップ
-3. 「ホーム画面に追加」をタップ
-4. 「追加」をタップ
-
-【Android(Chrome)の場合】
-1. Chromeでサイトを開く
-2. 右上の「⋮」メニューをタップ
-3. 「ホーム画面に追加」をタップ
-4. 案内に従って追加
-
-追加後は八反田穣さんのプロフィール画像がアイコンとして表示され、「Minoru Hattanda」という名前でホーム画面に追加されます。`;
-        alert(instructions);
-        if (saveModal) { 
-            saveModal.style.display = 'none'; 
-            document.body.style.overflow = ''; 
-        }
-    });
 });
 
 // ページ読み込み時に編集ボタンを表示するかチェック

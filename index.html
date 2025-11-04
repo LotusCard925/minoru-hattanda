@@ -58,11 +58,12 @@
                     <img src="icon.jpg" alt="八反田穣 Profile" class="profile-image clickable-image" onclick="openImageModal('icon.jpg', '')">
                 </div>
                 <div class="profile-name">八反田　穣</div>
+                <div class="company-titles">
+                    <div class="company">クリイトフィナンシャル株式会社</div>
+                    <div class="company">クリイト株式会社</div>
+                </div>
             </div>
 
-            <div class="title">クリイトフィナンシャル株式会社</div>
-            <div class="title">クリイト株式会社</div>
-            <div class="subtitle">営業</div>
 
             <!-- タグ -->
             <div class="tags">
@@ -99,7 +100,7 @@
                         <h3>自己紹介</h3>
                         <div class="intro-toggle">
                             <div class="intro-preview">
-                                <p>こんにちは！八反田穣です！</p>
+                                <p>こんにちは！八反田 穣です！</p>
                                 <p>証券外務員として、お客さまの「将来こうなりたい！」という夢や目標を、一緒に形にしていくお手伝いをしています✨</p>
                                 <button class="toggle-btn" onclick="toggleIntro()">
                                     <span class="toggle-text">もっと詳しく見る</span>
@@ -107,14 +108,23 @@
                                 </button>
                             </div>
                             <div class="intro-detail" style="display: none;">
-                                <p>こんにちは！八反田穣です！</p>
+                                <p>こんにちは！八反田 穣です！</p>
                                 <p>証券外務員として、お客さまの「将来こうなりたい！」という夢や目標を、一緒に形にしていくお手伝いをしています✨</p>
-                                
-                                <p>「投資って難しそう…」「お金のことって不安…」そんな気持ち、すごくわかります。<br>
-                                でも実は、ちゃんと知るとすごく面白いし、自分の未来にワクワクできるようになるんです！</p>
-                                
-                                <p>「なんでも相談できる」「話すと元気になる」そんな存在を目指して、明るく、前向きに、毎日がんばってます💪</p>
-                                
+
+                                <p>投資や資産運用だけでなく、生命保険や医療保険などの保障の部分も含めて、トータルで人生設計をサポートしています。</p>
+
+                                <p>「投資って難しそう...」「お金や保険のことって不安...」</p>
+
+                                <p>そんな気持ち、すごくわかります。</p>
+
+                                <p>でも実は、ちゃんと知るとすごく面白いし、自分の未来にワクワクできるようになるんです！</p>
+
+                                <p>将来への備えも、夢を叶える力も、どちらも「知ること」から始まります。</p>
+
+                                <p>「なんでも相談できる」「話すと元気になる」そんな存在を目指して、</p>
+
+                                <p>明るく前向きに、毎日お客さまに寄り添っています💪</p>
+
                                 <p>一緒に、楽しく前向きに、未来をデザインしていきましょう！</p>
                                 
                                 <button class="toggle-btn" onclick="toggleIntro()">
@@ -132,7 +142,6 @@
                                 <i class="fas fa-chart-line"></i>
                                 <div>
                                     <h4>クリイトフィナンシャル<br>株式会社</h4>
-                                    <p>営業</p>
                                     <p class="activity-detail">証券外務員として<br>投資相談・資産運用サポート</p>
                                 </div>
                             </div>
@@ -142,7 +151,6 @@
                                 <i class="fas fa-building"></i>
                                 <div>
                                     <h4>クリイト株式会社</h4>
-                                    <p>営業</p>
                                     <p class="activity-detail">金融サービス・投資商品の提案</p>
                                 </div>
                             </div>
@@ -275,23 +283,10 @@
         <div class="modal-content">
             <p class="modal-title">保存方法を選択</p>
             <div class="modal-actions">
-                <button id="add-to-home-screen-button" class="modal-button">
-                    <i class="fas fa-home"></i>
-                    ホーム画面に追加
-                </button>
-                
                 <button onclick="downloadContactFromModal()" class="modal-button">
                     <i class="fas fa-address-book"></i>
                     連絡先に保存
                 </button>
-
-                <a
-                    href="mailto:?subject=【Minoru Hattanda様】連絡先&body=Minoru Hattanda様の連絡先です。%0A%0A---%0A会社名: クリイトフィナンシャル株式会社・クリイト株式会社%0A役職: 営業%0Aメール: hattanda@qreat.co.jp%0A電話: 090-5620-3491%0AInstagram: https://www.instagram.com/bafantianrang4%0AFacebook: https://www.facebook.com/profile.php?id=100038618521575%0ALINE: https://line.me/ti/p/oXyczhrtwe%0AWebsite: https://www.qreatfinancial.co.jp/%0AWebsite: https://qreat.co.jp/%0A---%0A証券外務員・投資相談・資産運用サポート"
-                    class="modal-button"
-                >
-                    <i class="fas fa-envelope"></i>
-                    自分にメールを送る
-                </a>
             </div>
             <button id="close-modal-button" class="modal-close-button">戻る</button>
         </div>

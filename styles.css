@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Zen Old Mincho', serif;
-    background: linear-gradient(135deg, #ffffff 0%, #fefefe 25%, #faf9f7 50%, #f8f6f3 75%, #f5f3f0 100%);
-    color: #000000;
+    background: #000000;
+    color: #ffffff;
     line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
@@ -26,7 +26,7 @@ body {
 
 /* Remove any green status bar or browser chrome */
 html, body {
-    background: linear-gradient(135deg, #ffffff 0%, #fefefe 25%, #faf9f7 50%, #f8f6f3 75%, #f5f3f0 100%) !important;
+    background: #000000 !important;
     overflow-x: hidden;
 }
 
@@ -46,18 +46,18 @@ body {
 .container {
     max-width: 450px;
     margin: 0 auto;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(254, 254, 254, 0.9) 50%, rgba(250, 249, 247, 0.85) 100%);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(25px);
-    border: 1px solid rgba(0, 0, 128, 0.3);
+    border: 1px solid rgba(0, 0, 128, 0.5);
     border-radius: 24px;
     min-height: 100vh;
     position: relative;
     box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.08),
-        0 16px 64px rgba(0, 0, 0, 0.06),
-        0 32px 128px rgba(0, 0, 0, 0.04),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8),
-        inset 0 -1px 0 rgba(0, 0, 128, 0.1);
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 16px 64px rgba(0, 0, 0, 0.4),
+        0 32px 128px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(0, 0, 128, 0.2);
     padding: 2px;
     box-sizing: border-box;
 }
@@ -97,7 +97,7 @@ body {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1;
 }
 
@@ -138,7 +138,7 @@ body {
 .logo-circle {
     width: 100px;
     height: 100px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(0, 0, 128, 0.8);
     border-radius: 50%;
     display: flex;
@@ -190,9 +190,9 @@ body {
 .profile-name {
     font-size: 36px;
     font-weight: 800;
-    color: #000080;
     text-align: center;
-    text-shadow: 0 3px 6px rgba(0, 0, 128, 0.4);
+    color: #ffffff;
+    text-shadow: 1px 0 0 rgba(110, 131, 255, 0.6);
     margin-bottom: 8px;
     letter-spacing: -1px;
 }
@@ -200,20 +200,37 @@ body {
 .title {
     font-size: 18px;
     font-weight: 500;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     margin: 0 0 2px;
     letter-spacing: 0px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* 会社名（名前直下用） */
+.company-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin-top: 6px;
+}
+
+.company-titles .company {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .subtitle {
     font-size: 14px;
     font-weight: 400;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 15px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 /* タグ */
@@ -232,13 +249,13 @@ body {
 }
 
 .tag {
-    background: rgba(0, 0, 128, 0.1);
-    color: #000000;
+    background: rgba(0, 0, 128, 0.3);
+    color: #ffffff;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
-    border: 1px solid rgba(0, 0, 128, 0.3);
+    border: 1px solid rgba(0, 0, 128, 0.6);
     backdrop-filter: blur(10px);
 }
 
@@ -280,9 +297,9 @@ body {
 }
 
 .btn-secondary {
-    background: rgba(0, 0, 128, 0.2);
-    color: #000080;
-    border: 1px solid rgba(0, 0, 128, 0.4);
+    background: rgba(0, 0, 128, 0.5);
+    color: #ffffff;
+    border: 1px solid rgba(0, 0, 128, 0.7);
     padding: 16px 32px;
     border-radius: 12px;
     font-size: 16px;
@@ -298,10 +315,10 @@ body {
 }
 
 .btn-secondary:hover {
-    background: rgba(0, 0, 128, 0.3);
-    border-color: rgba(0, 0, 128, 0.6);
+    background: rgba(0, 0, 128, 0.6);
+    border-color: rgba(0, 0, 128, 0.8);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 128, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* ソーシャルリンク */
@@ -313,26 +330,32 @@ body {
     display: flex;
     align-items: center;
     padding: 16px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(254, 254, 254, 0.8) 100%);
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 128, 0.4);
     border-radius: 12px;
     margin-bottom: 12px;
     text-decoration: none;
-    color: inherit;
+    color: #ffffff;
     transition: all 0.3s ease;
     cursor: pointer;
     backdrop-filter: blur(10px);
     box-shadow: 
-        0 4px 16px rgba(0, 0, 0, 0.08),
-        0 2px 8px rgba(0, 0, 0, 0.04),
-        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        0 4px 16px rgba(0, 0, 0, 0.3),
+        0 2px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(0, 0, 128, 0.15);
 }
 
 .social-link:hover {
-    background: rgba(0, 0, 128, 0.2);
-    border-color: rgba(0, 0, 128, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 0, 128, 0.7);
     transform: translateX(4px);
-    box-shadow: 0 4px 15px rgba(0, 0, 128, 0.3);
+    box-shadow: 0 4px 18px rgba(0, 0, 128, 0.25);
+}
+
+/* クリック時のポップ演出 */
+.pop-active {
+    transform: scale(1.02) !important;
+    box-shadow: 0 0 0 2px rgba(0, 0, 128, 0.6), 0 12px 30px rgba(0, 0, 128, 0.35) !important;
 }
 
 .social-icon {
@@ -344,7 +367,7 @@ body {
     justify-content: center;
     margin-right: 16px;
     font-size: 18px;
-    color: #000000;
+    color: #ffffff;
 }
 
 .social-icon.github {
@@ -373,18 +396,18 @@ body {
 
 .social-name {
     font-weight: 600;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 2px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .social-handle {
     font-size: 14px;
-    color: #000000;
+    color: #e6e6e6;
 }
 
 .social-arrow {
-    color: #000000;
+    color: #ffffff;
     font-size: 14px;
 }
 
@@ -401,9 +424,9 @@ body {
 }
 
 .tab-btn {
-    background: rgba(0, 0, 128, 0.2);
-    color: #000080;
-    border: 1px solid rgba(0, 0, 128, 0.4);
+    background: rgba(0, 0, 128, 0.4);
+    color: #ffffff;
+    border: 1px solid rgba(0, 0, 128, 0.6);
     padding: 10px 16px;
     border-radius: 20px;
     font-size: 14px;
@@ -411,14 +434,14 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .tab-btn.active {
-    background: rgba(0, 0, 128, 0.2);
-    color: #000080;
-    border-color: rgba(0, 0, 128, 0.4);
-    box-shadow: 0 6px 20px rgba(0, 0, 128, 0.4);
+    background: rgba(0, 0, 128, 0.6);
+    color: #ffffff;
+    border-color: rgba(0, 0, 128, 0.8);
+    box-shadow: 0 6px 20px rgba(0, 0, 128, 0.5);
     transform: translateY(-1px);
 }
 
@@ -436,10 +459,11 @@ body {
 .tab-panel {
     display: none;
     padding: 20px;
-    background: rgba(0, 0, 128, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
-    border: 1px solid rgba(0, 0, 128, 0.2);
+    border: 1px solid rgba(0, 0, 128, 0.6);
     backdrop-filter: blur(10px);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 128, 0.35), 0 0 24px rgba(0, 0, 128, 0.15);
 }
 
 .tab-panel.active {
@@ -448,15 +472,15 @@ body {
 }
 
 .tab-panel h3 {
-    color: #000080;
+    color: #ffffff;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .tab-panel p {
-    color: #000000;
+    color: #ffffff;
     line-height: 1.6;
     margin-bottom: 10px;
     font-size: 14px;
@@ -473,10 +497,10 @@ body {
     display: flex;
     align-items: flex-start;
     padding: 15px;
-    background: rgba(0, 0, 128, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     margin-bottom: 12px;
-    border: 1px solid rgba(0, 0, 128, 0.2);
+    border: 1px solid rgba(0, 0, 128, 0.5);
     transition: all 0.3s ease;
     width: 100%;
     box-sizing: border-box;
@@ -484,9 +508,10 @@ body {
 }
 
 .activity-item:hover, .achievement-item:hover {
-    background: rgba(0, 0, 128, 0.1);
-    border-color: rgba(0, 0, 128, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 0, 128, 0.75);
     transform: translateX(4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 128, 0.25);
 }
 
 .activity-item i, .achievement-item i {
@@ -498,9 +523,9 @@ body {
     justify-content: center;
     margin-right: 15px;
     font-size: 16px;
-    color: #000080;
-    background: rgba(0, 0, 128, 0.1);
-    border: 1px solid rgba(0, 0, 128, 0.3);
+    color: #ffffff;
+    background: rgba(0, 0, 128, 0.4);
+    border: 1px solid rgba(0, 0, 128, 0.6);
     flex-shrink: 0;
     min-width: 40px;
     min-height: 40px;
@@ -513,7 +538,7 @@ body {
 }
 
 .activity-item h4, .achievement-item h4 {
-    color: #000000;
+    color: #ffffff;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 4px;
@@ -524,7 +549,7 @@ body {
 }
 
 .activity-item p, .achievement-item p {
-    color: #000000;
+    color: #e6e6e6;
     font-size: 12px;
     margin: 0;
     word-wrap: break-word;
@@ -532,7 +557,7 @@ body {
 }
 
 .activity-detail {
-    color: #000000 !important;
+    color: #ffffff !important;
     font-size: 11px !important;
     margin-top: 4px !important;
     font-style: italic;
@@ -600,13 +625,13 @@ body {
     .profile-name {
         font-size: 28px;
         font-weight: 800;
-        color: #000080;
-        text-shadow: 0 2px 4px rgba(0, 0, 128, 0.4);
+        color: #ffffff;
+        text-shadow: 1px 0 0 rgba(110, 131, 255, 0.6);
     }
     
     .title {
         font-size: 16px;
-        color: #000000;
+        color: #ffffff;
         margin: 0 0 4px;
     }
     
@@ -700,13 +725,13 @@ body {
     .profile-name {
         font-size: 32px;
         font-weight: 800;
-        color: #000080;
-        text-shadow: 0 2px 4px rgba(0, 0, 128, 0.4);
+        color: #ffffff;
+        text-shadow: 1px 0 0 rgba(110, 131, 255, 0.6);
     }
     
     .title {
         font-size: 18px;
-        color: #000000;
+        color: #ffffff;
         margin: 0 0 4px;
     }
     
@@ -767,13 +792,13 @@ body {
     .profile-name {
         font-size: 34px;
         font-weight: 800;
-        color: #000080;
-        text-shadow: 0 2px 4px rgba(0, 0, 128, 0.4);
+        color: #ffffff;
+        text-shadow: 1px 0 0 rgba(110, 131, 255, 0.6);
     }
     
     .title {
         font-size: 20px;
-        color: #000000;
+        color: #ffffff;
         margin: 0 0 4px;
     }
     
@@ -956,7 +981,7 @@ body {
     
     .title {
         font-size: 16px;
-        color: #000000;
+        color: #ffffff;
         margin: 0 0 4px;
     }
     
@@ -981,9 +1006,9 @@ body {
 }
 
 .toggle-btn {
-    background: rgba(0, 0, 128, 0.1);
-    color: #000080;
-    border: 1px solid rgba(0, 0, 128, 0.3);
+    background: rgba(0, 0, 128, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(0, 0, 128, 0.6);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 14px;
@@ -998,10 +1023,10 @@ body {
 }
 
 .toggle-btn:hover {
-    background: rgba(0, 0, 128, 0.2);
-    border-color: rgba(0, 0, 128, 0.5);
+    background: rgba(0, 0, 128, 0.5);
+    border-color: rgba(0, 0, 128, 0.75);
     transform: translateY(-1px);
-    box-shadow: 0 4px 15px rgba(0, 0, 128, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 128, 0.35);
 }
 
 .toggle-icon {
@@ -1027,7 +1052,7 @@ body {
 }
 
 .footer p {
-    color: #000000;
+    color: #ffffff;
     font-size: 14px;
     font-weight: 500;
     margin: 0;
@@ -1146,8 +1171,8 @@ body {
 }
 
 .modal-overlay .modal-content {
-    background: #ffffff;
-    color: #000000;
+    background: #111111;
+    color: #ffffff;
     border-radius: 20px;
     max-width: 420px;
     width: 100%;
@@ -1155,8 +1180,8 @@ body {
     overflow: auto;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(20px);
 }
 
@@ -1164,8 +1189,8 @@ body {
     font-size: 20px;
     font-weight: 600;
     margin: 0 0 24px;
-    color: #000080;
-    text-shadow: 0 2px 4px rgba(0, 0, 128, 0.3);
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .modal-actions {
@@ -1204,9 +1229,9 @@ body {
 .modal-close-button {
     width: 100%;
     padding: 12px;
-    background: rgba(0, 0, 128, 0.1);
-    color: #000080;
-    border: 1px solid rgba(0, 0, 128, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -1214,10 +1239,10 @@ body {
 }
 
 .modal-close-button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-1px);
-    color: #000000;
+    color: #ffffff;
 }
 
 /* アニメーション */
